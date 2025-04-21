@@ -1,5 +1,20 @@
 # XMRig
 
+comandi:
+
+sudo apt update && sudo apt upgrade -y
+
+sudo apt install git build-essential cmake libuv1-dev libssl-dev libhwloc-dev -y
+
+git clone https://github.com/xmrig/xmrig.git
+cd xmrig
+
+mkdir build && cd build
+cmake ..
+make -j4
+
+./xmrig -o pool.supportxmr.com:3333 -u IL_TUO_WALLET_XMR -p raspberrypi --coin monero
+
 [![Github All Releases](https://img.shields.io/github/downloads/xmrig/xmrig/total.svg)](https://github.com/xmrig/xmrig/releases)
 [![GitHub release](https://img.shields.io/github/release/xmrig/xmrig/all.svg)](https://github.com/xmrig/xmrig/releases)
 [![GitHub Release Date](https://img.shields.io/github/release-date/xmrig/xmrig.svg)](https://github.com/xmrig/xmrig/releases)
